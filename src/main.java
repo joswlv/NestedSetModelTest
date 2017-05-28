@@ -5,9 +5,11 @@ import java.io.IOException;
  */
 public class main {
 	public static void main(String[] args) throws IOException {
-		String filePath = args[0];
-		Run r = new Run(filePath);
+		String categoryFilePath = args[0];
+		String categoryCountFilePath = args[1];
+		String outputFilePath = args[2];
+		Run r = new Run(categoryFilePath, categoryCountFilePath, outputFilePath);
 
-		System.out.println(r.findParent("12").toString());
+		r.makeOutput();
 	}
 }
